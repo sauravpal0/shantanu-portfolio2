@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shantanu Pal | Clinical Research Coordinator</title>
+  <meta name="description" content="Oncology-focused Clinical Research Coordinator | Real-World Evidence Studies | ICH-GCP Compliance" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       CUSTOM CURSOR
+  ══════════════════════════════════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">SP<span class="logo-dot">.</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#therapeutic">Focus Areas</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#video">Intro Video</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('cv-section').scrollIntoView({behavior:'smooth'})">Download CV</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#therapeutic" class="mob-link">Focus Areas</a></li>
+      <li><a href="#research" class="mob-link">Research</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#certifications" class="mob-link">Certifications</a></li>
+      <li><a href="#video" class="mob-link">Video</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <!-- Three.js Canvas for 3D DNA -->
+    <canvas id="heroCanvas"></canvas>
+
+    <!-- Animated background grid -->
+    <div class="hero-grid"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <!-- Status badge -->
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Available for Opportunities
+        </div>
+
+        <h1 class="hero-name">
+          <span class="name-line">Shantanu</span>
+          <span class="name-line accent-line">Pal</span>
+        </h1>
+
+        <div class="hero-title">
+          <span class="title-prefix">_</span>
+          <span id="typedTitle"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+
+        <p class="hero-desc">
+          Driving oncology research with precision — from patient screening to sponsor audits,
+          shaping the future of real-world evidence in cancer care.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="4">0</span>
+            <span class="stat-label">Studies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="50">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Patients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">Hospitals</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="SHANTANU_PAL-CV-CRC.pdf" download class="btn-primary">
+            <span class="btn-icon">⬇</span>
+            Download CV
+          </a>
+          <a href="https://linkedin.com/in/shantanu615" target="_blank" class="btn-secondary">
+            <span class="btn-icon">in</span>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Profile photo with glow rings -->
+        <div class="profile-frame">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <div class="profile-img-wrap">
+            <img src="Gemini_Generated_Image_vlv2lovlv2lovlv2.png"
+                 alt="Shantanu Pal – Clinical Research Coordinator"
+                 class="profile-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="profile-fallback" style="display:none">SP</div>
+          </div>
+          <!-- Floating badges around photo -->
+          <div class="float-badge badge-gcp">ICH-GCP</div>
+          <div class="float-badge badge-rwe">RWE Expert</div>
+          <div class="float-badge badge-onco">Oncology CRC</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-label">// ABOUT</div>
+      <h2 class="section-title">Bridging Science &amp;<br/><span class="text-accent">Clinical Excellence</span></h2>
+
+      <div class="about-grid">
+        <div class="about-text glass-card reveal-left">
+          <p class="about-lead">
+            Oncology-focused Clinical Research Coordinator with hands-on experience in
+            Real-World Evidence studies, patient screening, informed consent, ICH-GCP
+            compliant documentation, safety reporting, EDC management, monitoring
+            support, and audit readiness.
+          </p>
+          <p class="about-body">
+            Currently based at Omega Hospitals, Hyderabad, I coordinate multi-sponsor
+            uro-oncology and prostate cancer studies while ensuring the highest
+            standards of GCP compliance. My background in PharmD combined with
+            practical experience across oncology, rheumatology, and head &amp; neck cancer
+            gives me a holistic view of clinical research operations.
+          </p>
+          <div class="about-chips">
+            <span class="chip">Omega Hospitals</span>
+            <span class="chip">Pfizer Sponsor Studies</span>
+            <span class="chip">BIACH &amp; RI</span>
+            <span class="chip">Real-World Evidence</span>
+          </div>
+        </div>
+
+        <div class="about-metrics reveal-right">
+          <!-- Metric cards -->
+          <div class="metric-card glass-card">
+            <div class="metric-icon">🧬</div>
+            <div class="metric-body">
+              <span class="metric-num">4+</span>
+              <span class="metric-lbl">Active Studies</span>
+            </div>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-icon">📋</div>
+            <div class="metric-body">
+              <span class="metric-num">ICH-GCP</span>
+              <span class="metric-lbl">Certified</span>
+            </div>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-icon">🏥</div>
+            <div class="metric-body">
+              <span class="metric-num">3</span>
+              <span class="metric-lbl">Major Cancer Centers</span>
+            </div>
+          </div>
+          <div class="metric-card glass-card">
+            <div class="metric-icon">💊</div>
+            <div class="metric-body">
+              <span class="metric-num">PharmD</span>
+              <span class="metric-lbl">Background</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       EXPERIENCE TIMELINE
+  ══════════════════════════════════════════════ -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-label">// EXPERIENCE</div>
+      <h2 class="section-title">Career <span class="text-accent">Timeline</span></h2>
+
+      <div class="timeline">
+
+        <!-- ─── Job 1 ─── -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot pulse-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-badge current">Current</div>
+              <span class="tl-date">Jan 2025 – Present</span>
+            </div>
+            <h3 class="tl-role">Clinical Research Coordinator</h3>
+            <p class="tl-org">🏥 Omega Hospitals, Hyderabad</p>
+            <div class="tl-studies">
+              <p class="studies-label">Studies Supported:</p>
+              <ul>
+                <li>NMIBC Real-World Evidence Study — <em>Pfizer</em></li>
+                <li>Metastatic Urothelial Carcinoma Outcomes</li>
+                <li>Metastatic Adenocarcinoma of Prostate</li>
+                <li>gSage Oncology AI Pilot — <em>Genesilico</em></li>
+              </ul>
+            </div>
+            <div class="tl-responsibilities">
+              <div class="resp-chip">Patient Screening</div>
+              <div class="resp-chip">Informed Consent</div>
+              <div class="resp-chip">Source Documentation</div>
+              <div class="resp-chip">Query Resolution</div>
+              <div class="resp-chip">Monitoring Support</div>
+              <div class="resp-chip">Regulatory Docs</div>
+              <div class="resp-chip">Safety Reporting</div>
+              <div class="resp-chip">ISF Maintenance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── Job 2 ─── -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-badge">Project</div>
+              <span class="tl-date">November 2025</span>
+            </div>
+            <h3 class="tl-role">Clinical Research Coordinator</h3>
+            <p class="tl-org">🏥 Basavatarakam Indo American Cancer Hospital &amp; RI</p>
+            <div class="tl-studies">
+              <p class="studies-label">LANTERN-India Project — Navitas Life Sciences</p>
+              <ul>
+                <li>Retrospective data extraction for LA-HNSCC patients</li>
+                <li>Clinion EDC updates and validation</li>
+                <li>Data cleaning and query resolution</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── Job 3 ─── -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-badge intern">Internship</div>
+              <span class="tl-date">May – Dec 2024</span>
+            </div>
+            <h3 class="tl-role">Clinical Research Intern</h3>
+            <p class="tl-org">🏥 Sree Deepti Rheumatology Center, Lakdikapul</p>
+            <div class="tl-studies">
+              <p class="studies-label">RA Real-World Evidence Study — Pfizer</p>
+              <ul>
+                <li>50+ patient coordination for bDMARDs/tsDMARDs study</li>
+                <li>HAQ and DAS28 assessments</li>
+                <li>AE/SAE tracking and patient follow-up</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── Job 4 ─── -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-badge prog">Program Mgmt</div>
+              <span class="tl-date">Mar – Dec 2023</span>
+            </div>
+            <h3 class="tl-role">Program Manager</h3>
+            <p class="tl-org">🏢 Inovine Conferences, Hyderabad</p>
+            <div class="tl-studies">
+              <ul>
+                <li>Led International Conference on Traditional &amp; Modern Medicine</li>
+                <li>Coordinated global speakers, pharma sponsors, academic partners</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       THERAPEUTIC AREAS
+  ══════════════════════════════════════════════ -->
+  <section id="therapeutic" class="section therapeutic-section">
+    <div class="container">
+      <div class="section-label">// THERAPEUTIC AREAS</div>
+      <h2 class="section-title">Clinical <span class="text-accent">Focus Areas</span></h2>
+
+      <div class="therapeutic-grid">
+        <div class="th-card glass-card reveal-up" data-icon="🔬">
+          <div class="th-glow"></div>
+          <div class="th-icon">🔬</div>
+          <h3>Oncology</h3>
+          <p>Comprehensive RWE studies across major cancer types with sponsor-grade compliance</p>
+          <div class="th-bar"><div class="th-fill" style="--fill:92%"></div></div>
+        </div>
+        <div class="th-card glass-card reveal-up" data-icon="🫧">
+          <div class="th-glow"></div>
+          <div class="th-icon">🫧</div>
+          <h3>Bladder Cancer</h3>
+          <p>NMIBC real-world evidence studies with Pfizer, patient screening and outcome monitoring</p>
+          <div class="th-bar"><div class="th-fill" style="--fill:88%"></div></div>
+        </div>
+        <div class="th-card glass-card reveal-up" data-icon="🧪">
+          <div class="th-glow"></div>
+          <div class="th-icon">🧪</div>
+          <h3>Prostate Cancer</h3>
+          <p>Metastatic adenocarcinoma treatment patterns and real-world clinical outcomes</p>
+          <div class="th-bar"><div class="th-fill" style="--fill:85%"></div></div>
+        </div>
+        <div class="th-card glass-card reveal-up" data-icon="🫁">
+          <div class="th-glow"></div>
+          <div class="th-icon">🫁</div>
+          <h3>Oropharyngeal Cancer</h3>
+          <p>LANTERN-India — LA-HNSCC retrospective treatment pattern evaluation</p>
+          <div class="th-bar"><div class="th-fill" style="--fill:78%"></div></div>
+        </div>
+        <div class="th-card glass-card reveal-up" data-icon="🦴">
+          <div class="th-glow"></div>
+          <div class="th-icon">🦴</div>
+          <h3>Rheumatology</h3>
+          <p>RA bDMARDs/tsDMARDs treatment persistence, DAS28 assessment, patient follow-up</p>
+          <div class="th-bar"><div class="th-fill" style="--fill:82%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       RESEARCH SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="research" class="section research-section">
+    <div class="container">
+      <div class="section-label">// RESEARCH</div>
+      <h2 class="section-title">Featured <span class="text-accent">Research</span></h2>
+
+      <div class="research-card glass-card reveal-up">
+        <div class="research-tag">Academic Project</div>
+        <h3 class="research-title">
+          Evaluation of Therapeutic Outcomes in Rheumatoid Arthritis Patients
+          Receiving Methotrexate-Based Combination Therapy
+        </h3>
+
+        <div class="research-metrics-row">
+          <div class="rm-card">
+            <div class="rm-chart">
+              <canvas id="esrChart" width="120" height="120"></canvas>
+              <span class="rm-center-val">ESR</span>
+            </div>
+            <span class="rm-label">ESR Analysis</span>
+          </div>
+          <div class="rm-card">
+            <div class="rm-chart">
+              <canvas id="das28Chart" width="120" height="120"></canvas>
+              <span class="rm-center-val">DAS28</span>
+            </div>
+            <span class="rm-label">DAS28 Scoring</span>
+          </div>
+          <div class="rm-card">
+            <div class="rm-visual-bar">
+              <div class="vis-bar-row">
+                <span>Remission</span>
+                <div class="vis-bar-track"><div class="vis-bar-fill" style="width:45%;background:#00f5d4"></div></div>
+                <span>45%</span>
+              </div>
+              <div class="vis-bar-row">
+                <span>Low Activity</span>
+                <div class="vis-bar-track"><div class="vis-bar-fill" style="width:32%;background:#00b4d8"></div></div>
+                <span>32%</span>
+              </div>
+              <div class="vis-bar-row">
+                <span>Moderate</span>
+                <div class="vis-bar-track"><div class="vis-bar-fill" style="width:18%;background:#0077b6"></div></div>
+                <span>18%</span>
+              </div>
+              <div class="vis-bar-row">
+                <span>High</span>
+                <div class="vis-bar-track"><div class="vis-bar-fill" style="width:5%;background:#023e8a"></div></div>
+                <span>5%</span>
+              </div>
+            </div>
+            <span class="rm-label">Disease Activity Distribution</span>
+          </div>
+        </div>
+
+        <div class="research-highlights">
+          <div class="rh-item">✅ Disease Activity Monitoring via DAS28</div>
+          <div class="rh-item">✅ ESR Biomarker Analysis</div>
+          <div class="rh-item">✅ Clinical Outcome Evaluation</div>
+          <div class="rh-item">✅ Methotrexate Combination Therapy</div>
+        </div>
+
+        <div class="research-links">
+          <a href="https://orcid.org/0009-0002-8756-5954" target="_blank" class="res-link">View on ORCID →</a>
+          <a href="https://researchgate.net/profile/Shantanu-Pal-5" target="_blank" class="res-link">ResearchGate →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SKILLS SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-label">// SKILLS</div>
+      <h2 class="section-title">Technical <span class="text-accent">Capabilities</span></h2>
+
+      <div class="skills-grid">
+        <!-- Each card has a skill and a proficiency level -->
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">📊</div>
+          <h4>Clinical Trial Coordination</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="95"></div></div>
+          <span class="sk-pct">95%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">📜</div>
+          <h4>ICH-GCP Compliance</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="92"></div></div>
+          <span class="sk-pct">92%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">⚠️</div>
+          <h4>AE/SAE Reporting</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="90"></div></div>
+          <span class="sk-pct">90%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">📁</div>
+          <h4>Source Documentation</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="93"></div></div>
+          <span class="sk-pct">93%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">💻</div>
+          <h4>EDC Management</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="88"></div></div>
+          <span class="sk-pct">88%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">🔍</div>
+          <h4>Monitoring Visit Support</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="91"></div></div>
+          <span class="sk-pct">91%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">❓</div>
+          <h4>Query Resolution</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="89"></div></div>
+          <span class="sk-pct">89%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">📂</div>
+          <h4>Regulatory Documentation</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="90"></div></div>
+          <span class="sk-pct">90%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">✍️</div>
+          <h4>Medical Writing</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="80"></div></div>
+          <span class="sk-pct">80%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">🛡️</div>
+          <h4>Pharmacovigilance</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="85"></div></div>
+          <span class="sk-pct">85%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">📈</div>
+          <h4>Data Analysis</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="82"></div></div>
+          <span class="sk-pct">82%</span>
+        </div>
+        <div class="skill-card glass-card reveal-up">
+          <div class="sk-icon">📊</div>
+          <h4>MS Excel &amp; Reporting</h4>
+          <div class="sk-bar"><div class="sk-fill" data-w="87"></div></div>
+          <span class="sk-pct">87%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CERTIFICATIONS CAROUSEL
+  ══════════════════════════════════════════════ -->
+  <section id="certifications" class="section cert-section">
+    <div class="container">
+      <div class="section-label">// CERTIFICATIONS</div>
+      <h2 class="section-title">Credentials &amp; <span class="text-accent">Training</span></h2>
+
+      <div class="cert-carousel-wrap">
+        <button class="cert-arrow left" id="certPrev">&#8592;</button>
+        <div class="cert-carousel" id="certCarousel">
+
+          <div class="cert-card glass-card">
+            <div class="cert-icon">📜</div>
+            <h4>ICH-GCP</h4>
+            <p>Good Clinical Practice</p>
+            <span class="cert-issuer">NIDA — National Institute on Drug Abuse</span>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🌍</div>
+            <h4>Ethics &amp; Review</h4>
+            <p>Interventional Clinical Research</p>
+            <span class="cert-issuer">World Health Organization (WHO)</span>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🛡️</div>
+            <h4>Managing AEs &amp; SAEs</h4>
+            <p>Safety Reporting &amp; Procedures</p>
+            <span class="cert-issuer">ISCR — Indian Society for Clinical Research</span>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🤖</div>
+            <h4>AI in Pharma</h4>
+            <p>Transforming Life Sciences Through Technology</p>
+            <span class="cert-issuer">Skill India</span>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🏥</div>
+            <h4>GCP Workshop</h4>
+            <p>Good Clinical Practice</p>
+            <span class="cert-issuer">Dept. of Medical Oncology, BIACH &amp; RI</span>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-icon">🌐</div>
+            <h4>International Conference</h4>
+            <p>Traditional &amp; Modern Medicine</p>
+            <span class="cert-issuer">Inovine Conferences — Dubai</span>
+          </div>
+
+        </div>
+        <button class="cert-arrow right" id="certNext">&#8594;</button>
+      </div>
+
+      <div class="cert-dots" id="certDots"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       VIDEO SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="video" class="section video-section">
+    <div class="container">
+      <div class="section-label">// INTRODUCTION</div>
+      <h2 class="section-title">Watch My <span class="text-accent">Intro Video</span></h2>
+
+      <div class="video-wrap glass-card reveal-up">
+        <div class="video-inner">
+          <video
+            id="introVideo"
+            controls
+            preload="metadata"
+            poster="Gemini_Generated_Image_vlv2lovlv2lovlv2.png"
+            style="width:100%;border-radius:16px;max-height:540px;background:#000;"
+          >
+            <source src="Use_the_third_202602192323_8f91g.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-caption">
+          <span class="vid-tag">🎬 Introduction</span>
+          <p>A brief personal introduction by Shantanu Pal — Clinical Research Coordinator, Oncology &amp; Rheumatology specialist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CV DOWNLOAD SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="cv-section" class="section cv-section">
+    <div class="container">
+      <div class="cv-panel glass-card reveal-up">
+        <div class="cv-left">
+          <div class="section-label">// CURRICULUM VITAE</div>
+          <h2>Download My <span class="text-accent">Full CV</span></h2>
+          <p>Complete resume including all experience, certifications, skills, and academic projects — ready for recruiters, sponsors, and CROs.</p>
+          <a href="SHANTANU_PAL-CV-CRC.pdf" download class="btn-primary large">
+            <span class="btn-icon">⬇</span>
+            Download CV (PDF)
+          </a>
+        </div>
+        <div class="cv-right">
+          <!-- CV preview thumbnail -->
+          <div class="cv-preview">
+            <div class="cv-preview-inner">
+              <div class="cv-line"></div>
+              <div class="cv-line short"></div>
+              <div class="cv-line"></div>
+              <div class="cv-line med"></div>
+              <div class="cv-line"></div>
+              <div class="cv-line short"></div>
+              <div class="cv-line"></div>
+            </div>
+            <span class="cv-overlay-text">SHANTANU PAL<br/>CRC · PharmD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-label">// CONTACT</div>
+      <h2 class="section-title">Let's <span class="text-accent">Connect</span></h2>
+
+      <div class="contact-grid">
+        <a href="mailto:sauravpal614@gmail.com" class="contact-card glass-card reveal-up">
+          <div class="cc-icon">✉️</div>
+          <h4>Email</h4>
+          <p>sauravpal614@gmail.com</p>
+        </a>
+        <a href="tel:+918127938953" class="contact-card glass-card reveal-up">
+          <div class="cc-icon">📱</div>
+          <h4>Phone</h4>
+          <p>+91 81279 38953</p>
+        </a>
+        <a href="https://linkedin.com/in/shantanu615" target="_blank" class="contact-card glass-card reveal-up">
+          <div class="cc-icon">💼</div>
+          <h4>LinkedIn</h4>
+          <p>linkedin.com/in/shantanu615</p>
+        </a>
+        <a href="https://orcid.org/0009-0002-8756-5954" target="_blank" class="contact-card glass-card reveal-up">
+          <div class="cc-icon">🔬</div>
+          <h4>ORCID</h4>
+          <p>0009-0002-8756-5954</p>
+        </a>
+        <a href="https://researchgate.net/profile/Shantanu-Pal-5" target="_blank" class="contact-card glass-card reveal-up">
+          <div class="cc-icon">📖</div>
+          <h4>ResearchGate</h4>
+          <p>Shantanu-Pal-5</p>
+        </a>
+        <div class="contact-card glass-card reveal-up location-card">
+          <div class="cc-icon">📍</div>
+          <h4>Location</h4>
+          <p>Hyderabad, Telangana, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Shantanu Pal</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-role">Clinical Research Coordinator</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-copy">© 2025 All rights reserved</span>
+    </div>
+    <div class="footer-scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

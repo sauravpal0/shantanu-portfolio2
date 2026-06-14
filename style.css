@@ -1233,3 +1233,38 @@ video:focus { outline: none; }
     object-fit:cover;
     border:2px solid #00f5d4;
     box-shadow:0 0 15px rgba(0,245,212,.5);
+
+/* Mobile Badge Container */
+.mobile-badges{
+    display:none;
+}
+
+@media (max-width: 768px){
+
+    /* Hide floating badges on mobile */
+    .float-badge{
+        display:none !important;
+    }
+
+    /* Show badges below video */
+    .mobile-badges{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;
+        margin-top:20px;
+        padding:0 15px;
+    }
+
+    .mobile-badges span{
+        padding:6px 12px;
+        background:rgba(2,8,23,0.9);
+        border:1px solid rgba(0,245,212,0.3);
+        border-radius:999px;
+        font-size:0.7rem;
+        color:var(--cyan);
+        font-family:var(--font-mono);
+        backdrop-filter:blur(10px);
+        white-space:nowrap;
+    }
+}

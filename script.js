@@ -249,8 +249,8 @@ window.addEventListener('load', function () {
  
     var lines = [
       'Clinical Research Coordinator',
-      'ICH-GCP Specialist',
-      'Oncology RWE Expert',
+      'Oncology & Rheumatology',
+      'Real World Studies',
       'PharmD | Hyderabad, India'
     ];
     var li = 0, ci = 0, deleting = false;

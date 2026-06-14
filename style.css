@@ -1179,7 +1179,7 @@ video:focus { outline: none; }
   .ring-2 { width: 340px; height: 340px; }
   .ring-3 { width: 380px; height: 380px; }
   .badge-gcp, .badge-rwe { right: -5%; }
-  .badge-onco { left: -5%; }
+  .badge-onco { left: -22%; }
  
   .about-grid { grid-template-columns: 1fr; }
   .research-metrics-row { grid-template-columns: 1fr 1fr; }

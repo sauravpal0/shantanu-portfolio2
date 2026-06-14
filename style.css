@@ -418,13 +418,12 @@ body:hover .cursor-dot { opacity: 1; }
 @keyframes ringRotate {
   0% { transform: translate(-50%,-50%) rotate(0deg); }
   100% { transform: translate(-50%,-50%) rotate(360deg); }
-}
- 
+} 
 .profile-video{
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:50% -20%;
+    object-position:35% center;
     border-radius:50%;
 }
 .profile-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }

@@ -473,6 +473,12 @@ body:hover .cursor-dot { opacity: 1; }
   animation-delay: 1.8s;
 }
 
+.badge-onco {
+  bottom: -20px;
+  left: -80px;
+  animation-delay: 2.4s;
+}
+
 .badge-sae {
   top: 65%;
   left: -15%;

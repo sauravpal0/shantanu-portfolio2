@@ -419,22 +419,32 @@ body:hover .cursor-dot { opacity: 1; }
   0% { transform: translate(-50%,-50%) rotate(0deg); }
   100% { transform: translate(-50%,-50%) rotate(360deg); }
 } 
+.profile-frame{
+    position:relative;
+    width:520px;
+    height:360px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.profile-img-wrap{
+    position:absolute;
+    width:420px;
+    height:240px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid rgba(0,245,212,.45);
+    box-shadow:
+        0 0 40px rgba(0,245,212,.35),
+        0 0 80px rgba(0,180,216,.25);
+}
+
 .profile-video{
     width:100%;
     height:100%;
     object-fit:cover;
     object-position:center center;
-    border-radius:50%;
-}
-.profile-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-.profile-fallback {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-size: 5rem;
-  font-weight: 800;
-  color: var(--cyan);
-  background: var(--bg-card);
 }
  
 /* Floating badges */
